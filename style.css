@@ -241,16 +241,16 @@ ul {
 
 .hero-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-    line-height: 1.35;
+    font-size: 1.22rem;
+    font-weight: 400;
+    line-height: 1.25;
     text-transform: uppercase;
     color: #000000;
     max-width: 950px;
     text-align: left;
     margin-top: 40px;
     margin-left: 175px;
-    letter-spacing: 0.8px;
+    letter-spacing: 1.0px;
 }
 
 .hero-description strong {
