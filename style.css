@@ -696,7 +696,7 @@ ul {
 .final-text-overlay {
     position: absolute;
     top: 28%;
-    right: 5%;
+    right: 2%;
     transform: translateY(-50%);
     text-align: left;
     display: flex;
@@ -710,7 +710,7 @@ ul {
     color: #000;
     /* Black color as per the reference image */
     font-size: 4.8rem;
-    font-weight: 800;
+    font-weight: 650;
     /* Slightly refined weight */
     line-height: 1.1;
     /* Adjusted for better readability */
@@ -722,7 +722,7 @@ ul {
 .cta-combined-box {
     position: absolute;
     bottom: 40px;
-    left: 15%;
+    left: 20%;
     display: flex;
     align-items: center;
     gap: 30px;
