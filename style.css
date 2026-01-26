@@ -471,11 +471,8 @@ ul {
     color: #000;
 }
 
-/* WhatsApp Button - Global & CTA Section Base */
-.whatsapp-cta-btn {
-    position: absolute;
-    bottom: 60px;
-    left: 55%;
+/* WhatsApp Image Button Base Styles */
+.whatsapp-cta-image-btn {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -483,57 +480,24 @@ ul {
     z-index: 20;
 }
 
-.whatsapp-cta-btn:hover {
+.whatsapp-cta-image-btn:hover {
     transform: scale(1.08);
 }
 
-.wa-icon-box {
-    background-color: #fff;
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    /* Perfect circle */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    position: relative;
-    z-index: 2;
-    margin-right: -25px;
-    /* Overlap to join with the green box */
-}
-
-.wa-icon-box svg {
-    width: 48px;
-    /* Proportional icon */
-    height: 48px;
-}
-
-.wa-text {
-    background-color: #25D366;
-    color: #fff;
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.0rem;
-    font-weight: 800;
-    padding: 0 45px 0 55px;
-    /* Proportional padding */
-    height: 85px;
-    /* Robust but not excessive height */
-    display: flex;
-    align-items: center;
-    border-radius: 0 20px 20px 0;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    white-space: nowrap;
+.whatsapp-cta-image-btn img {
+    height: 160px;
+    width: auto;
+    display: block;
 }
 
 @media (max-width: 1024px) {
-    .whatsapp-cta-btn {
+    .whatsapp-cta-image-btn {
         left: 60%;
     }
 }
 
 @media (max-width: 768px) {
-    .whatsapp-cta-btn {
+    .whatsapp-cta-image-btn {
         position: relative;
         bottom: 0;
         left: 0;
@@ -541,15 +505,8 @@ ul {
         justify-content: center;
     }
 
-    .wa-icon-box {
-        width: 50px;
-        height: 50px;
-    }
-
-    .wa-text {
-        font-size: 1.1rem;
-        height: 45px;
-        padding: 0 20px 0 25px;
+    .whatsapp-cta-image-btn img {
+        height: 90px;
     }
 }
 
@@ -750,6 +707,27 @@ ul {
     margin: 0;
 }
 
+.cta-combined-box {
+    position: absolute;
+    bottom: 40px;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    z-index: 100;
+}
+
+.cta-phrase {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: none;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
 .final-text-overlay .whatsapp-cta-btn {
     position: relative;
     bottom: auto;
@@ -782,12 +760,9 @@ ul {
     /* Aligned to left */
 }
 
-.final-bottom-container .whatsapp-cta-btn {
+.final-bottom-container .whatsapp-cta-image-btn {
     position: relative;
-    bottom: auto;
-    left: auto;
     transform: scale(0.9);
-    /* Slightly more prominent */
     transform-origin: center;
 }
 
@@ -812,6 +787,23 @@ ul {
         transform: none;
         padding: 40px 20px;
         background-color: #ff9d00;
+        text-align: center;
+    }
+
+    .cta-combined-box {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        z-index: 10;
+    }
+
+    .cta-phrase {
+        padding: 0 20px;
+        font-size: 1.8rem;
         text-align: center;
     }
 
