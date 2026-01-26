@@ -549,9 +549,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 10px;
     border-right: 10px solid #ffffff;
-    height: 400px;
+    height: 420px;
     position: relative;
 }
 
@@ -560,8 +560,8 @@ ul {
 }
 
 .gallery-item img {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 95%;
+    max-height: 95%;
     object-fit: contain;
     position: relative;
     z-index: 2;
