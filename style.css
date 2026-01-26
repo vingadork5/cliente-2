@@ -420,7 +420,7 @@ ul {
 
 /* Hero Section */
 .hero {
-    min-height: 81vh;
+    min-height: 93vh;
     display: flex;
     align-items: center;
     background-image: url('img/1.png');
@@ -428,7 +428,7 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 85px;
-    height: 81vh;
+    height: 93vh;
     overflow: hidden;
     position: relative;
 }
@@ -538,20 +538,20 @@ ul {
 }
 
 .hero-certifications img {
-    height: 60px;
-    /* Adjusted height for better visibility */
+    height: 50px;
+    /* Decreased height */
     width: auto;
     object-fit: contain;
 }
 
 .crea-logo {
-    height: 45px !important;
-    /* Decreased size as requested */
+    height: 42px !important;
+    /* Decreased size */
 }
 
 .bombeiros-logo {
-    height: 85px !important;
-    /* Increased size as requested */
+    height: 65px !important;
+    /* Decreased size */
 }
 
 @media (max-width: 1200px) {
@@ -790,7 +790,7 @@ ul {
     font-weight: 900;
     text-transform: uppercase;
     line-height: 1.1;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     animation: fadeInUp 1s ease-out;
 }
@@ -1005,8 +1005,8 @@ ul {
 .final-slide-up {
     opacity: 0;
     transform: translateY(100px);
-    transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
-                transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: opacity 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .final-slide-up.revealed {
@@ -1110,7 +1110,7 @@ ul {
     font-family: 'Outfit', sans-serif;
     color: #000;
     /* Black color as per the reference image */
-    font-size: 4.8rem;
+    font-size: 4.2rem;
     font-weight: 650;
     /* Slightly refined weight */
     line-height: 1.1;
@@ -1175,10 +1175,11 @@ ul {
 }
 
 .final-logo img {
-    height: 250px;
-    /* Increased size as per reference */
+    height: 220px;
+    /* Decreased size */
     width: auto;
     display: block;
+    animation: gentleFloat 3s ease-in-out infinite;
 }
 
 .final-bottom-container .whatsapp-cta-image-btn {
