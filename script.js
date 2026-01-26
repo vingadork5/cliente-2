@@ -71,4 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe all elements with scroll-reveal class
     const revealElements = document.querySelectorAll('.scroll-reveal');
     revealElements.forEach(el => observer.observe(el));
+
+    // Observe BG section elements with bg-scroll-reveal class
+    const bgRevealElements = document.querySelectorAll('.bg-scroll-reveal, .bg-list-item-reveal');
+    bgRevealElements.forEach((el, index) => {
+        observer.observe(el);
+    });
+
+    // Observe Final section elements with final-slide-up class
+    const finalRevealElements = document.querySelectorAll('.final-slide-up');
+    finalRevealElements.forEach((el, index) => {
+        observer.observe(el);
+    });
+
+    // Observe Gallery section elements with gallery-scroll-reveal class
+    const galleryRevealElements = document.querySelectorAll('.gallery-scroll-reveal');
+    galleryRevealElements.forEach((el, index) => {
+        observer.observe(el);
+    });
 });
