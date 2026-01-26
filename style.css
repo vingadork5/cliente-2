@@ -230,27 +230,27 @@ ul {
 .hero-description-img {
     max-width: 1000px;
     /* Match text width */
-    width: 111%;
+    width: 100%;
     height: auto;
     display: block;
-    margin-bottom: -10px;
-    margin-left: 0;
+    margin-bottom: -40px;
+    margin-left: 20px;
     margin-top: 40px;
     /* Added margin-top to lower it */
 }
 
 .hero-description {
-    font-size: 1.49rem;
-    font-weight: 800;
-    /* Outfit 800 */
-    line-height: 1.29;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.35;
     text-transform: uppercase;
     color: #000000;
     max-width: 950px;
     text-align: left;
-    margin-top: 30px;
-    margin-left: 0;
-    /* Reset for better alignment */
+    margin-top: 40px;
+    margin-left: 175px;
+    letter-spacing: 0.8px;
 }
 
 .hero-description strong {
@@ -742,7 +742,7 @@ ul {
 .cta-combined-box {
     position: absolute;
     bottom: 40px;
-    left: 20%;
+    left: 15%;
     display: flex;
     align-items: center;
     gap: 30px;
