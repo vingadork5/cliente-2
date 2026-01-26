@@ -241,16 +241,16 @@ ul {
 
 .hero-description {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.22rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    line-height: 1.25;
+    line-height: 1.15;
     text-transform: uppercase;
     color: #000000;
     max-width: 950px;
     text-align: left;
     margin-top: 40px;
     margin-left: 175px;
-    letter-spacing: 1.0px;
+    letter-spacing: 1.2px;
 }
 
 .hero-description strong {
@@ -262,8 +262,7 @@ ul {
     gap: 60px;
     align-items: center;
     margin-top: 60px;
-    margin-left: 0;
-    /* Reset for better alignment */
+    margin-left: 175px;
 }
 
 .hero-certifications img {
