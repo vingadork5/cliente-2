@@ -674,6 +674,19 @@ ul {
     width: 100%;
 }
 
+.final-flame {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    /* Adjusted to match the separator position */
+    height: 70%;
+    /* Taller to overflow like in the image */
+    width: auto;
+    z-index: 5;
+    transform: translate(-50%, -48%);
+    pointer-events: none;
+}
+
 .final-bg {
     width: 100%;
     display: block;
@@ -683,7 +696,7 @@ ul {
 .final-text-overlay {
     position: absolute;
     top: 28%;
-    right: 10%;
+    right: 5%;
     transform: translateY(-50%);
     text-align: left;
     display: flex;
@@ -696,11 +709,13 @@ ul {
     font-family: 'Outfit', sans-serif;
     color: #000;
     /* Black color as per the reference image */
-    font-size: 5.5rem;
-    font-weight: 900;
+    font-size: 4.8rem;
+    font-weight: 800;
+    /* Slightly refined weight */
     line-height: 1.1;
+    /* Adjusted for better readability */
     text-transform: none;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     margin: 0;
 }
 
