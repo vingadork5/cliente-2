@@ -680,6 +680,50 @@ ul {
     letter-spacing: -1px;
 }
 
+/* Animated headline: per-character reveal + subtle flame glow */
+.info-orange-text {
+    position: relative;
+    overflow: visible;
+    -webkit-font-smoothing: antialiased;
+    will-change: transform, opacity, text-shadow;
+    animation: flameGlow 2.2s ease-in-out infinite alternate;
+}
+
+.info-orange-text .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(14px) rotateX(6deg);
+    animation: headlineReveal 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-play-state: paused;
+}
+
+@keyframes headlineReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+@keyframes flameGlow {
+    0% {
+        text-shadow: 0 0 6px rgba(238,151,27,0.08), 0 0 18px rgba(255,61,0,0.02);
+    }
+    100% {
+        text-shadow: 0 0 12px rgba(238,151,27,0.35), 0 0 40px rgba(255,61,0,0.12);
+    }
+}
+
+/* Ensure line-breaks (<br>) keep spacing and words don't collapse */
+.info-orange-text .char.space {
+    width: 0.35ch;
+}
+
+/* Start per-character animation only after the parent is revealed (via existing scroll observer) */
+.info-orange-text.revealed .char,
+.scroll-reveal.revealed .info-orange-text .char {
+    animation-play-state: running;
+}
+
 @media (max-width: 768px) {
     .info-content-overlay {
         position: relative;

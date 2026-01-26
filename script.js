@@ -38,6 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Split .info-orange-text into per-character spans so we can stagger animations
+    const headlineEls = document.querySelectorAll('.info-orange-text');
+    headlineEls.forEach(el => {
+        const nodes = Array.from(el.childNodes);
+        el.innerHTML = '';
+        let charIndex = 0;
+        nodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.textContent;
+                for (const ch of text) {
+                    if (ch === ' ') {
+                        // Insert a normal space text node so words can wrap naturally
+                        el.appendChild(document.createTextNode(' '));
+                        charIndex++;
+                    } else {
+                        const span = document.createElement('span');
+                        span.className = 'char';
+                        span.textContent = ch;
+                        span.style.animationDelay = (charIndex * 0.02) + 's';
+                        el.appendChild(span);
+                        charIndex++;
+                    }
+                }
+            } else {
+                // Preserve elements like <br>
+                el.appendChild(node.cloneNode(true));
+            }
+        });
+    });
 
     // Header scroll background effect
     window.addEventListener('scroll', () => {
