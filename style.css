@@ -49,6 +49,153 @@ ul {
     list-style: none;
 }
 
+/* Text Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-text {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade {
+    opacity: 0;
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Staggered animation delays for list items */
+.animate-text:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.animate-text:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animate-text:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.animate-text:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.animate-text:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.animate-text:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Scroll-triggered animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CTA Animations */
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* CTA Button Styles with Animations */
+.whatsapp-cta-image-btn {
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: fadeInBounce 0.8s ease-out forwards, gentleFloat 3s ease-in-out 1s infinite;
+    cursor: pointer;
+}
+
+.whatsapp-cta-image-btn:hover {
+    transform: translateY(-10px) scale(1.08);
+    filter: brightness(1.1);
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+.whatsapp-cta-image-btn img {
+    display: block;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s ease;
+}
+
+.whatsapp-cta-image-btn:hover img {
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+}
+
+/* CTA Phrase Animation */
+.cta-phrase {
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInBounce 0.8s ease-out 0.2s forwards;
+}
+
+.cta-phrase:hover {
+    transform: translateY(-3px);
+}
+
+/* CTA Combined Box Animation */
+.cta-combined-box {
+    transition: transform 0.3s ease;
+}
+
+.cta-combined-box:hover .whatsapp-cta-image-btn {
+    transform: translateY(-12px) scale(1.1);
+}
+
+
+
 .container {
     width: 90%;
     max-width: var(--max-width);
@@ -155,15 +302,15 @@ ul {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 81vh;
     display: flex;
     align-items: center;
     background-image: url('img/1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 90px;
-    height: 100vh;
+    padding-top: 85px;
+    height: 81vh;
     overflow: hidden;
     position: relative;
 }
@@ -189,7 +336,7 @@ ul {
 }
 
 .hero-image img {
-    max-height: 85vh;
+    max-height: 60vh;
     width: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
@@ -467,6 +614,20 @@ ul {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.final-text-overlay h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.final-text-overlay h2:hover {
+    transform: scale(1.05);
 }
 
 .cta-services-list li {

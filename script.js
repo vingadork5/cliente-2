@@ -49,4 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = 'none';
         }
     });
+
+    // Scroll-triggered animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add delay for staggered effect
+                setTimeout(() => {
+                    entry.target.classList.add('revealed');
+                }, index * 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with scroll-reveal class
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach(el => observer.observe(el));
 });
