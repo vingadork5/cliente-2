@@ -776,8 +776,8 @@ ul {
     background-color: transparent;
     /* Changed to transparent if it's an overlay */
     padding: 10px 10px 10px 100px;
-    margin-top: -220px;
-    /* Adjusted to sit better on the image */
+    margin-top: -300px;
+    /* Adjusted to sit higher on the image */
     position: relative;
     z-index: 30;
 }
@@ -785,11 +785,18 @@ ul {
 .final-bottom-container {
     max-width: 1200px;
     margin: 0;
-    /* Remove auto centering */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Aligned to left */
+    gap: 40px;
+    /* Space between button and logo */
+}
+
+.final-logo img {
+    height: 250px;
+    /* Increased size as per reference */
+    width: auto;
+    display: block;
 }
 
 .final-bottom-container .whatsapp-cta-image-btn {
@@ -885,6 +892,12 @@ ul {
     }
 
     .final-bottom-container {
+        flex-direction: column;
         justify-content: center;
+        gap: 25px;
+    }
+
+    .final-logo img {
+        height: 80px;
     }
 }
