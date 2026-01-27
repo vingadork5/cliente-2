@@ -420,7 +420,7 @@ ul {
 
 /* Hero Section */
 .hero {
-    min-height: 93vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background-image: url('img/1.png');
@@ -428,7 +428,7 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 85px;
-    height: 93vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
