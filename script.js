@@ -5,36 +5,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.main-nav');
     const header = document.querySelector('#main-header');
+    const body = document.body;
 
+    // Mobile menu toggle
     if (mobileBtn && nav) {
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
             mobileBtn.classList.toggle('active');
-
-            // Animate hamburger to X
-            const spans = mobileBtn.querySelectorAll('span');
-            if (mobileBtn.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
-
-                // Show nav
-                nav.style.display = 'flex';
-                nav.style.position = 'absolute';
-                nav.style.top = '100%';
-                nav.style.left = '0';
-                nav.style.width = '100%';
-                nav.style.flexDirection = 'column';
-                nav.style.background = 'rgba(10, 10, 10, 0.95)';
-                nav.style.padding = '20px';
-                nav.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+            nav.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (nav.classList.contains('active')) {
+                body.style.overflow = 'hidden';
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                body.style.overflow = 'auto';
+            }
+        });
 
-                nav.style.display = ''; // Reset to css default
-                nav.removeAttribute('style'); // Clean inline styles
+        // Close menu when clicking on a link
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                nav.classList.remove('active');
+                body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when pressing Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                mobileBtn.classList.remove('active');
+                nav.classList.remove('active');
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when clicking on nav
+        nav.addEventListener('click', (e) => {
+            if (e.target === nav) {
+                mobileBtn.classList.remove('active');
+                nav.classList.remove('active');
+                body.style.overflow = 'auto';
             }
         });
     }
