@@ -333,6 +333,11 @@ ul {
     background-color: #000000;
     /* Solid black as per image */
     border-bottom: none;
+    transition: top 0.3s ease-in-out;
+}
+
+#main-header.header-hidden {
+    top: -90px;
 }
 
 .header-content {
@@ -1616,7 +1621,7 @@ ul {
     .final-bottom {
         padding: 30px 20px;
         margin-top: 0;
-        background-color: #ee971b;
+        background-color: #000;
         text-align: center;
     }
 
@@ -1750,8 +1755,8 @@ ul {
 
     .info-orange-text {
         color: #ee971b;
-        font-size: 0.95rem;
-        line-height: -2.15;
+        font-size: 0.9rem;
+        line-height: 1.2;
         letter-spacing: -0.2px;
     }
 
@@ -1922,6 +1927,6 @@ ul {
     }
 
     .final-bottom {
-        background-color: rgba(247, 182, 0, 0.92);
+
     }
 }

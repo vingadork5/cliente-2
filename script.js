@@ -81,13 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Header scroll background effect
+    // Header scroll effect
+    let lastScrollTop = 0;
     window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 90) {
+            // Scroll Down
+            header.classList.add('header-hidden');
+        } else {
+            // Scroll Up
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+
         if (window.scrollY > 50) {
-            header.style.background = '#000000';
             header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
         } else {
-            header.style.background = '#000000';
             header.style.boxShadow = 'none';
         }
     });
