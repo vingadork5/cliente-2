@@ -342,23 +342,19 @@ ul {
 
 .header-content {
     display: flex;
-    justify-content: center;
-    /* Center the nav */
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     max-width: 1400px;
-    width: 95%;
-    position: relative;
-    /* Context for absolute logo */
+    margin: 0 auto;
+    padding: 0 40px; /* Add some padding */
+    width: 100%;
 }
 
 /* Logo */
 .logo {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 85px;
-    /* Adjusted position */
 }
 
 .logo img {
@@ -369,8 +365,7 @@ ul {
 
 /* Navigation */
 .main-nav {
-    margin-left: 385px;
-    /* Slight nudge to right from center */
+    /* No margin needed */
 }
 
 .main-nav ul {
