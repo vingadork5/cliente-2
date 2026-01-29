@@ -1091,7 +1091,7 @@ ul {
     letter-spacing: 1px;
     margin: 30px 0 20px 0;
     text-align: center;
-    padding-left: 60px;
+    padding-left: 0;
 }
 
 .modal-services-list {
@@ -1103,12 +1103,13 @@ ul {
 .modal-services-list p {
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     font-weight: 400;
     line-height: 1.4;
     text-align: justify;
     margin-bottom: 15px;
-    text-indent: 0;
+    text-indent: 6px;
+    text-transform: uppercase;
 }
 
 .modal-services-list p strong {
