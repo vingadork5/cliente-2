@@ -931,6 +931,7 @@ ul {
     line-height: 1.05;
     text-transform: uppercase;
     letter-spacing: -1px;
+    text-align: justify;
 }
 
 /* Animated headline: per-character reveal + subtle flame glow */
@@ -2196,7 +2197,7 @@ ul {
 
 /* Modal Warning Text Styling */
 .modal-warning-text {
-    color: #000000; /* Orange color to match brand */
+    color: #000000;
     font-family: 'Outfit', sans-serif;
     font-size: 1.4rem;
     font-weight: 900;
