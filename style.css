@@ -982,22 +982,25 @@ ul {
 .info-cta-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 24px;
+    padding: 15px 35px;
     background-color: #ee971b;
     color: #000;
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-radius: 4px;
+    letter-spacing: 1px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     border: 2px solid #ee971b;
+    box-shadow: 0 4px 15px rgba(238, 151, 27, 0.3);
 }
 
 .info-cta-btn:hover {
-    background-color: transparent;
-    color: #ee971b;
-    box-shadow: 0 0 20px rgba(238, 151, 27, 0.5);
+    background-color: #ffad41;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(238, 151, 27, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -1031,13 +1034,18 @@ ul {
 
     .info-cta-btn {
         color: #fff;
-        background-color: rgba(238, 151, 27, 0.8);
-        border-color: rgba(238, 151, 27, 0.8);
+        background-color: #ee971b;
+        border-color: #ee971b;
+        font-size: 1.2rem;
+        padding: 18px 40px;
+        box-shadow: 0 4px 15px rgba(238, 151, 27, 0.4);
     }
 
     .info-cta-btn:hover {
-        background-color: #ee971b;
+        background-color: #ffad41;
         color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(238, 151, 27, 0.6);
     }
 }
 
@@ -1093,7 +1101,7 @@ ul {
     text-align: center;
     margin: 30px 0 20px -30px;
     letter-spacing: 1px;
-    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    animation: fadeInUp 0.3s ease-out 0.5s forwards;
     opacity: 0;
 }
 
@@ -1113,6 +1121,7 @@ ul {
     margin-bottom: 15px;
     text-indent: 6px;
     text-transform: uppercase;
+    animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }
 
 .modal-services-list p strong {
@@ -1138,6 +1147,7 @@ ul {
     text-transform: none;
     letter-spacing: 1.5px;
     text-align: left;
+    animation: fadeInUp 0.3s ease-out 0.5s forwards;
     animation: gentleFloat 3s ease-in-out infinite;
 }
 
@@ -2161,14 +2171,13 @@ ul {
 }
 
 .info-white-text {
-    color: #000;
+    color: #ffffff;
     font-family: 'Outfit', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    text-align: left;
-    margin-top: 15px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+    font-size: 2rem;
+    line-height: 1.05;
+    text-align: justify;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .info-button {
@@ -2198,6 +2207,7 @@ ul {
     opacity: 0.9;
     text-align: center;
     object-fit: contain;
+    animation: fadeInUp 0.3s ease-out 0.5s forwards;
 }
 
 @media (max-width: 768px) {
