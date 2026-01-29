@@ -982,6 +982,7 @@ ul {
 .info-cta-btn {
     display: inline-block;
     margin-top: 20px;
+    margin-left: 45px;
     padding: 15px 35px;
     background-color: #ee971b;
     color: #000;
@@ -2172,12 +2173,13 @@ ul {
 
 .info-white-text {
     color: #ffffff;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     line-height: 1.05;
     text-align: justify;
     font-weight: 800;
     letter-spacing: -1px;
+    margin-left: 25px;
 }
 
 .info-button {
