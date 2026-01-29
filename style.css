@@ -932,6 +932,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: -1px;
     text-align: justify;
+    margin-bottom: 0;
 }
 
 /* Animated headline: per-character reveal + subtle flame glow */
@@ -1072,7 +1073,7 @@ ul {
 
 .modal-cta-content {
     width: 100%;
-    max-width: 1600px;
+    max-width: 2600px;
     background-image: url('img/pop.png');
     background-size: cover;
     background-position: center;
@@ -1083,15 +1084,17 @@ ul {
 }
 
 .modal-title {
+    color: #000000;
     font-family: 'Montserrat', sans-serif;
-    color: #000;
     font-size: 2.7rem;
-    font-weight: 800;
+    font-weight: 900;
+    line-height: 1.1;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 30px 0 20px 0;
     text-align: center;
-    padding-left: 0;
+    margin: 30px 0 20px -30px;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
 }
 
 .modal-services-list {
@@ -1325,7 +1328,7 @@ ul {
 }
 
 .whatsapp-cta-image-btn img {
-    height: 90px;
+    height: 60px;
     width: auto;
     display: block;
 }
