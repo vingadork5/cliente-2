@@ -7,6 +7,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('#main-header');
     const body = document.body;
 
+    // Modal functionality
+    const modal = document.getElementById('infoModal');
+    const openModalBtn = document.getElementById('openInfoModal');
+    const closeModalBtn = document.querySelector('.modal-close');
+
+    if (openModalBtn && modal) {
+        openModalBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+            body.style.overflow = 'hidden';
+        });
+    }
+
+    if (closeModalBtn && modal) {
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            body.style.overflow = 'auto';
+        });
+    }
+
+    // Close modal when clicking outside
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                body.style.overflow = 'auto';
+            }
+        });
+    }
+
     // Mobile menu toggle
     if (mobileBtn && nav) {
         mobileBtn.addEventListener('click', (e) => {
