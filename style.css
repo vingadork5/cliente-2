@@ -1033,6 +1033,13 @@ ul {
         letter-spacing: -0.5px;
     }
 
+    /* Reduce font size of "Obrigatorio por lei" text on mobile */
+    .info-white-text {
+        font-size: 0.8rem;
+        margin-left: 0;
+        text-align: celnter;
+    }
+
     .info-cta-btn {
         color: #fff;
         background-color: #ee971b;
@@ -2174,7 +2181,7 @@ ul {
 .info-white-text {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.76rem;
     line-height: 1.05;
     text-align: justify;
     font-weight: 800;
